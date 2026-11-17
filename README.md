@@ -44,6 +44,10 @@ set up migrations:
 
 	dotnet ef migrations add InitialCreate
 	dotnet ef database update
+	
+NOTE: For some reason I need to run this before it lets me do "InitialCreate":
+
+	dotnet restore
 
 to create sample data run with the "init" parameter:
 
@@ -67,8 +71,12 @@ the executable will be under:
 
 ## Screenshots
 
-<img width="858" height="366" alt="image" src="https://github.com/user-attachments/assets/5f990da7-c069-49f5-ae80-0373a61e3685" />
-<img width="852" height="478" alt="image" src="https://github.com/user-attachments/assets/4acb632d-5cf4-437d-b01f-5e51357dbc9e" />
+<img width="863" height="481" alt="image" src="https://github.com/user-attachments/assets/989fbe20-e3f9-4179-b64d-e5fb84fbd338" />
+<img width="859" height="488" alt="image" src="https://github.com/user-attachments/assets/e994d071-901a-4c63-9c91-d2e9aa5d5a68" />
+<img width="862" height="494" alt="image" src="https://github.com/user-attachments/assets/b9449f16-4f5d-4ec1-9b97-4b7179d9f7b1" />
+
+
+
 
 
 

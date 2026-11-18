@@ -23,12 +23,13 @@ public class DeleteAssetDisplay : AbstractMenuDisplay
         do
         { 
             idString = AnsiConsole.Ask<string>("Enter asset ID: ");
+            if (idString.ToLower().Trim() == "q")
+            {
+                return -1;
+            }
         } while(!int.TryParse(idString, out id));
         
-        if (idString.ToLower().Trim() == "q")
-        {
-            return -1;
-        }
+       
         
         return _tracker.DeleteAsset(id);
     }

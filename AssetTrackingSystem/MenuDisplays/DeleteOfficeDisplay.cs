@@ -24,12 +24,13 @@ public class DeleteOfficeDisplay : AbstractMenuDisplay
         do
         {
             idString = AnsiConsole.Ask<string>("Enter Office ID: ");
+            if (idString.ToLower().Trim() == "q")
+            {
+                return -1;
+            }
         } while (!int.TryParse(idString, out id));
 
-        if (idString.ToLower().Trim() == "q")
-        {
-            return -1;
-        }
+        
         return _tracker.DeleteOffice(id);
     }
 
